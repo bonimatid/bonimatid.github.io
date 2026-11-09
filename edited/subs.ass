@@ -1,0 +1,162 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Rubik,96,&H00FFFFFF,&H00FFFFFF,&H00101010,&H78000000,-1,0,0,0,100,100,0,0,1,6,3,2,60,60,300,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:01.10,0:00:01.84,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}תקשיבו{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.84,0:00:02.00,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}אני{\c&HFFFFFF&} רוצה לדבר איתכם
+Dialogue: 0,0:00:02.00,0:00:02.32,Main,,0,0,0,,אני {\c&H0033D7FF&}רוצה{\c&HFFFFFF&} לדבר איתכם
+Dialogue: 0,0:00:02.32,0:00:02.56,Main,,0,0,0,,אני רוצה {\c&H0033D7FF&}לדבר{\c&HFFFFFF&} איתכם
+Dialogue: 0,0:00:02.56,0:00:02.84,Main,,0,0,0,,אני רוצה לדבר {\c&H0033D7FF&}איתכם{\c&HFFFFFF&}
+Dialogue: 0,0:00:02.84,0:00:03.06,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}רגע{\c&HFFFFFF&} על משהו
+Dialogue: 0,0:00:03.06,0:00:03.14,Main,,0,0,0,,רגע {\c&H0033D7FF&}על{\c&HFFFFFF&} משהו
+Dialogue: 0,0:00:03.14,0:00:03.50,Main,,0,0,0,,רגע על {\c&H0033D7FF&}משהו{\c&HFFFFFF&}
+Dialogue: 0,0:00:03.50,0:00:03.86,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}אתם{\c&HFFFFFF&} יודעים
+Dialogue: 0,0:00:03.86,0:00:04.12,Main,,0,0,0,,אתם {\c&H0033D7FF&}יודעים{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.12,0:00:04.56,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}שלפעמים{\c&HFFFFFF&} אנחנו כל כך
+Dialogue: 0,0:00:04.56,0:00:04.74,Main,,0,0,0,,שלפעמים {\c&H0033D7FF&}אנחנו{\c&HFFFFFF&} כל כך
+Dialogue: 0,0:00:04.74,0:00:04.94,Main,,0,0,0,,שלפעמים אנחנו {\c&H0033D7FF&}כל{\c&HFFFFFF&} כך
+Dialogue: 0,0:00:04.94,0:00:05.22,Main,,0,0,0,,שלפעמים אנחנו כל {\c&H0033D7FF&}כך{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.22,0:00:05.56,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}מנסים{\c&HFFFFFF&} לחסוך כסף
+Dialogue: 0,0:00:05.56,0:00:05.82,Main,,0,0,0,,מנסים {\c&H0033D7FF&}לחסוך{\c&HFFFFFF&} כסף
+Dialogue: 0,0:00:05.82,0:00:06.18,Main,,0,0,0,,מנסים לחסוך {\c&H0033D7FF&}כסף{\c&HFFFFFF&}
+Dialogue: 0,0:00:06.18,0:00:06.94,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}שבסוף{\c&HFFFFFF&} אנחנו מוציאים
+Dialogue: 0,0:00:06.94,0:00:07.06,Main,,0,0,0,,שבסוף {\c&H0033D7FF&}אנחנו{\c&HFFFFFF&} מוציאים
+Dialogue: 0,0:00:07.06,0:00:07.62,Main,,0,0,0,,שבסוף אנחנו {\c&H0033D7FF&}מוציאים{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.62,0:00:08.08,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}דווקא{\c&HFFFFFF&} יותר
+Dialogue: 0,0:00:08.08,0:00:08.62,Main,,0,0,0,,דווקא {\c&H0033D7FF&}יותר{\c&HFFFFFF&}
+Dialogue: 0,0:00:08.62,0:00:09.60,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}עכשיו{\c&HFFFFFF&} תחשבו על זה
+Dialogue: 0,0:00:09.60,0:00:10.22,Main,,0,0,0,,עכשיו {\c&H0033D7FF&}תחשבו{\c&HFFFFFF&} על זה
+Dialogue: 0,0:00:10.22,0:00:10.36,Main,,0,0,0,,עכשיו תחשבו {\c&H0033D7FF&}על{\c&HFFFFFF&} זה
+Dialogue: 0,0:00:10.36,0:00:10.52,Main,,0,0,0,,עכשיו תחשבו על {\c&H0033D7FF&}זה{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.52,0:00:10.94,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}נגיד{\c&HFFFFFF&} שאתם קונים רכב
+Dialogue: 0,0:00:10.94,0:00:11.44,Main,,0,0,0,,נגיד {\c&H0033D7FF&}שאתם{\c&HFFFFFF&} קונים רכב
+Dialogue: 0,0:00:11.44,0:00:11.68,Main,,0,0,0,,נגיד שאתם {\c&H0033D7FF&}קונים{\c&HFFFFFF&} רכב
+Dialogue: 0,0:00:11.68,0:00:12.18,Main,,0,0,0,,נגיד שאתם קונים {\c&H0033D7FF&}רכב{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.18,0:00:12.44,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}אתם{\c&HFFFFFF&} מוצאים רכב זול
+Dialogue: 0,0:00:12.44,0:00:12.72,Main,,0,0,0,,אתם {\c&H0033D7FF&}מוצאים{\c&HFFFFFF&} רכב זול
+Dialogue: 0,0:00:12.72,0:00:13.04,Main,,0,0,0,,אתם מוצאים {\c&H0033D7FF&}רכב{\c&HFFFFFF&} זול
+Dialogue: 0,0:00:13.04,0:00:13.24,Main,,0,0,0,,אתם מוצאים רכב {\c&H0033D7FF&}זול{\c&HFFFFFF&}
+Dialogue: 0,0:00:13.24,0:00:14.16,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}ואומרים{\c&HFFFFFF&} לעצמכם
+Dialogue: 0,0:00:14.16,0:00:14.68,Main,,0,0,0,,ואומרים {\c&H0033D7FF&}לעצמכם{\c&HFFFFFF&}
+Dialogue: 0,0:00:14.68,0:00:14.98,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}וואלה{\c&HFFFFFF&} איזה יופי
+Dialogue: 0,0:00:14.98,0:00:15.18,Main,,0,0,0,,וואלה {\c&H0033D7FF&}איזה{\c&HFFFFFF&} יופי
+Dialogue: 0,0:00:15.18,0:00:15.58,Main,,0,0,0,,וואלה איזה {\c&H0033D7FF&}יופי{\c&HFFFFFF&}
+Dialogue: 0,0:00:15.58,0:00:16.02,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}חסכתי{\c&HFFFFFF&} כסף
+Dialogue: 0,0:00:16.02,0:00:16.38,Main,,0,0,0,,חסכתי {\c&H0033D7FF&}כסף{\c&HFFFFFF&}
+Dialogue: 0,0:00:16.38,0:00:16.68,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}אבל{\c&HFFFFFF&} אז עבר קצת זמן
+Dialogue: 0,0:00:16.68,0:00:17.00,Main,,0,0,0,,אבל {\c&H0033D7FF&}אז{\c&HFFFFFF&} עבר קצת זמן
+Dialogue: 0,0:00:17.00,0:00:17.20,Main,,0,0,0,,אבל אז {\c&H0033D7FF&}עבר{\c&HFFFFFF&} קצת זמן
+Dialogue: 0,0:00:17.20,0:00:17.36,Main,,0,0,0,,אבל אז עבר {\c&H0033D7FF&}קצת{\c&HFFFFFF&} זמן
+Dialogue: 0,0:00:17.36,0:00:17.74,Main,,0,0,0,,אבל אז עבר קצת {\c&H0033D7FF&}זמן{\c&HFFFFFF&}
+Dialogue: 0,0:00:17.74,0:00:18.14,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}מתחילות{\c&HFFFFFF&} בעיות
+Dialogue: 0,0:00:18.14,0:00:18.42,Main,,0,0,0,,מתחילות {\c&H0033D7FF&}בעיות{\c&HFFFFFF&}
+Dialogue: 0,0:00:18.42,0:00:18.80,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}תיקונים{\c&HFFFFFF&} הוצאות
+Dialogue: 0,0:00:18.80,0:00:19.46,Main,,0,0,0,,תיקונים {\c&H0033D7FF&}הוצאות{\c&HFFFFFF&}
+Dialogue: 0,0:00:19.46,0:00:19.98,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}פתאום{\c&HFFFFFF&} אתם מבינים
+Dialogue: 0,0:00:19.98,0:00:20.30,Main,,0,0,0,,פתאום {\c&H0033D7FF&}אתם{\c&HFFFFFF&} מבינים
+Dialogue: 0,0:00:20.30,0:00:20.64,Main,,0,0,0,,פתאום אתם {\c&H0033D7FF&}מבינים{\c&HFFFFFF&}
+Dialogue: 0,0:00:20.64,0:00:21.10,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}שאולי{\c&HFFFFFF&} זאת לא הייתה
+Dialogue: 0,0:00:21.10,0:00:21.32,Main,,0,0,0,,שאולי {\c&H0033D7FF&}זאת{\c&HFFFFFF&} לא הייתה
+Dialogue: 0,0:00:21.32,0:00:21.48,Main,,0,0,0,,שאולי זאת {\c&H0033D7FF&}לא{\c&HFFFFFF&} הייתה
+Dialogue: 0,0:00:21.48,0:00:21.78,Main,,0,0,0,,שאולי זאת לא {\c&H0033D7FF&}הייתה{\c&HFFFFFF&}
+Dialogue: 0,0:00:21.78,0:00:22.06,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}כזאת{\c&HFFFFFF&} מציאה
+Dialogue: 0,0:00:22.06,0:00:22.46,Main,,0,0,0,,כזאת {\c&H0033D7FF&}מציאה{\c&HFFFFFF&}
+Dialogue: 0,0:00:22.46,0:00:23.28,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}ולפעמים{\c&HFFFFFF&} דווקא
+Dialogue: 0,0:00:23.28,0:00:23.90,Main,,0,0,0,,ולפעמים {\c&H0033D7FF&}דווקא{\c&HFFFFFF&}
+Dialogue: 0,0:00:23.90,0:00:24.26,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}אם{\c&HFFFFFF&} הייתם שמים
+Dialogue: 0,0:00:24.26,0:00:24.68,Main,,0,0,0,,אם {\c&H0033D7FF&}הייתם{\c&HFFFFFF&} שמים
+Dialogue: 0,0:00:24.68,0:00:24.96,Main,,0,0,0,,אם הייתם {\c&H0033D7FF&}שמים{\c&HFFFFFF&}
+Dialogue: 0,0:00:24.96,0:00:25.38,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}קצת{\c&HFFFFFF&} יותר כסף בהתחלה
+Dialogue: 0,0:00:25.38,0:00:25.56,Main,,0,0,0,,קצת {\c&H0033D7FF&}יותר{\c&HFFFFFF&} כסף בהתחלה
+Dialogue: 0,0:00:25.56,0:00:26.00,Main,,0,0,0,,קצת יותר {\c&H0033D7FF&}כסף{\c&HFFFFFF&} בהתחלה
+Dialogue: 0,0:00:26.00,0:00:26.44,Main,,0,0,0,,קצת יותר כסף {\c&H0033D7FF&}בהתחלה{\c&HFFFFFF&}
+Dialogue: 0,0:00:26.44,0:00:27.18,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}הייתם{\c&HFFFFFF&} יכולים לחסוך לעצמכם
+Dialogue: 0,0:00:27.18,0:00:27.46,Main,,0,0,0,,הייתם {\c&H0033D7FF&}יכולים{\c&HFFFFFF&} לחסוך לעצמכם
+Dialogue: 0,0:00:27.46,0:00:27.82,Main,,0,0,0,,הייתם יכולים {\c&H0033D7FF&}לחסוך{\c&HFFFFFF&} לעצמכם
+Dialogue: 0,0:00:27.82,0:00:28.26,Main,,0,0,0,,הייתם יכולים לחסוך {\c&H0033D7FF&}לעצמכם{\c&HFFFFFF&}
+Dialogue: 0,0:00:28.26,0:00:28.78,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}הרבה{\c&HFFFFFF&} יותר כאב ראש
+Dialogue: 0,0:00:28.78,0:00:29.10,Main,,0,0,0,,הרבה {\c&H0033D7FF&}יותר{\c&HFFFFFF&} כאב ראש
+Dialogue: 0,0:00:29.10,0:00:29.56,Main,,0,0,0,,הרבה יותר {\c&H0033D7FF&}כאב{\c&HFFFFFF&} ראש
+Dialogue: 0,0:00:29.56,0:00:29.98,Main,,0,0,0,,הרבה יותר כאב {\c&H0033D7FF&}ראש{\c&HFFFFFF&}
+Dialogue: 0,0:00:29.98,0:00:30.86,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}וכסף{\c&HFFFFFF&} בהמשך
+Dialogue: 0,0:00:30.86,0:00:31.26,Main,,0,0,0,,וכסף {\c&H0033D7FF&}בהמשך{\c&HFFFFFF&}
+Dialogue: 0,0:00:31.26,0:00:32.00,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}וזה{\c&HFFFFFF&} לא רק ברכבים
+Dialogue: 0,0:00:32.00,0:00:32.18,Main,,0,0,0,,וזה {\c&H0033D7FF&}לא{\c&HFFFFFF&} רק ברכבים
+Dialogue: 0,0:00:32.18,0:00:32.44,Main,,0,0,0,,וזה לא {\c&H0033D7FF&}רק{\c&HFFFFFF&} ברכבים
+Dialogue: 0,0:00:32.44,0:00:32.98,Main,,0,0,0,,וזה לא רק {\c&H0033D7FF&}ברכבים{\c&HFFFFFF&}
+Dialogue: 0,0:00:32.98,0:00:33.12,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}זה{\c&HFFFFFF&} קורה לנו גם בטלפונים
+Dialogue: 0,0:00:33.12,0:00:33.40,Main,,0,0,0,,זה {\c&H0033D7FF&}קורה{\c&HFFFFFF&} לנו גם בטלפונים
+Dialogue: 0,0:00:33.40,0:00:33.54,Main,,0,0,0,,זה קורה {\c&H0033D7FF&}לנו{\c&HFFFFFF&} גם בטלפונים
+Dialogue: 0,0:00:33.54,0:00:33.70,Main,,0,0,0,,זה קורה לנו {\c&H0033D7FF&}גם{\c&HFFFFFF&} בטלפונים
+Dialogue: 0,0:00:33.70,0:00:34.22,Main,,0,0,0,,זה קורה לנו גם {\c&H0033D7FF&}בטלפונים{\c&HFFFFFF&}
+Dialogue: 0,0:00:34.22,0:00:34.76,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}במוצרי{\c&HFFFFFF&} חשמל
+Dialogue: 0,0:00:34.76,0:00:35.28,Main,,0,0,0,,במוצרי {\c&H0033D7FF&}חשמל{\c&HFFFFFF&}
+Dialogue: 0,0:00:35.28,0:00:35.68,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}ובעוד{\c&HFFFFFF&} מלא דברים
+Dialogue: 0,0:00:35.68,0:00:35.86,Main,,0,0,0,,ובעוד {\c&H0033D7FF&}מלא{\c&HFFFFFF&} דברים
+Dialogue: 0,0:00:35.86,0:00:36.14,Main,,0,0,0,,ובעוד מלא {\c&H0033D7FF&}דברים{\c&HFFFFFF&}
+Dialogue: 0,0:00:36.14,0:00:36.80,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}עכשיו{\c&HFFFFFF&} שלא תבינו אותי
+Dialogue: 0,0:00:36.80,0:00:37.10,Main,,0,0,0,,עכשיו {\c&H0033D7FF&}שלא{\c&HFFFFFF&} תבינו אותי
+Dialogue: 0,0:00:37.10,0:00:37.38,Main,,0,0,0,,עכשיו שלא {\c&H0033D7FF&}תבינו{\c&HFFFFFF&} אותי
+Dialogue: 0,0:00:37.38,0:00:37.56,Main,,0,0,0,,עכשיו שלא תבינו {\c&H0033D7FF&}אותי{\c&HFFFFFF&}
+Dialogue: 0,0:00:37.56,0:00:37.70,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}לא{\c&HFFFFFF&} נכון
+Dialogue: 0,0:00:37.70,0:00:38.04,Main,,0,0,0,,לא {\c&H0033D7FF&}נכון{\c&HFFFFFF&}
+Dialogue: 0,0:00:38.04,0:00:38.58,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}אני{\c&HFFFFFF&} לא אומר שצריך תמיד
+Dialogue: 0,0:00:38.58,0:00:39.06,Main,,0,0,0,,אני {\c&H0033D7FF&}לא{\c&HFFFFFF&} אומר שצריך תמיד
+Dialogue: 0,0:00:39.06,0:00:39.40,Main,,0,0,0,,אני לא {\c&H0033D7FF&}אומר{\c&HFFFFFF&} שצריך תמיד
+Dialogue: 0,0:00:39.40,0:00:39.94,Main,,0,0,0,,אני לא אומר {\c&H0033D7FF&}שצריך{\c&HFFFFFF&} תמיד
+Dialogue: 0,0:00:39.94,0:00:40.54,Main,,0,0,0,,אני לא אומר שצריך {\c&H0033D7FF&}תמיד{\c&HFFFFFF&}
+Dialogue: 0,0:00:40.54,0:00:40.88,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}לקנות{\c&HFFFFFF&} את הכי יקר
+Dialogue: 0,0:00:40.88,0:00:41.00,Main,,0,0,0,,לקנות {\c&H0033D7FF&}את{\c&HFFFFFF&} הכי יקר
+Dialogue: 0,0:00:41.00,0:00:41.30,Main,,0,0,0,,לקנות את {\c&H0033D7FF&}הכי{\c&HFFFFFF&} יקר
+Dialogue: 0,0:00:41.30,0:00:41.52,Main,,0,0,0,,לקנות את הכי {\c&H0033D7FF&}יקר{\c&HFFFFFF&}
+Dialogue: 0,0:00:41.52,0:00:42.18,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}ממש{\c&HFFFFFF&} לא
+Dialogue: 0,0:00:42.18,0:00:42.36,Main,,0,0,0,,ממש {\c&H0033D7FF&}לא{\c&HFFFFFF&}
+Dialogue: 0,0:00:42.36,0:00:42.86,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}אבל{\c&HFFFFFF&} כן צריך להבין
+Dialogue: 0,0:00:42.86,0:00:43.10,Main,,0,0,0,,אבל {\c&H0033D7FF&}כן{\c&HFFFFFF&} צריך להבין
+Dialogue: 0,0:00:43.10,0:00:43.40,Main,,0,0,0,,אבל כן {\c&H0033D7FF&}צריך{\c&HFFFFFF&} להבין
+Dialogue: 0,0:00:43.40,0:00:43.80,Main,,0,0,0,,אבל כן צריך {\c&H0033D7FF&}להבין{\c&HFFFFFF&}
+Dialogue: 0,0:00:43.80,0:00:44.16,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}שלא{\c&HFFFFFF&} כל דבר שעולה פחות
+Dialogue: 0,0:00:44.16,0:00:44.32,Main,,0,0,0,,שלא {\c&H0033D7FF&}כל{\c&HFFFFFF&} דבר שעולה פחות
+Dialogue: 0,0:00:44.32,0:00:44.62,Main,,0,0,0,,שלא כל {\c&H0033D7FF&}דבר{\c&HFFFFFF&} שעולה פחות
+Dialogue: 0,0:00:44.62,0:00:44.88,Main,,0,0,0,,שלא כל דבר {\c&H0033D7FF&}שעולה{\c&HFFFFFF&} פחות
+Dialogue: 0,0:00:44.88,0:00:45.10,Main,,0,0,0,,שלא כל דבר שעולה {\c&H0033D7FF&}פחות{\c&HFFFFFF&}
+Dialogue: 0,0:00:45.10,0:00:45.50,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}באמת{\c&HFFFFFF&} חוסך לנו כסף
+Dialogue: 0,0:00:45.50,0:00:45.80,Main,,0,0,0,,באמת {\c&H0033D7FF&}חוסך{\c&HFFFFFF&} לנו כסף
+Dialogue: 0,0:00:45.80,0:00:45.92,Main,,0,0,0,,באמת חוסך {\c&H0033D7FF&}לנו{\c&HFFFFFF&} כסף
+Dialogue: 0,0:00:45.92,0:00:46.30,Main,,0,0,0,,באמת חוסך לנו {\c&H0033D7FF&}כסף{\c&HFFFFFF&}
+Dialogue: 0,0:00:46.30,0:00:46.80,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}כי{\c&HFFFFFF&} בסוף כשאתם קונים משהו
+Dialogue: 0,0:00:46.80,0:00:47.32,Main,,0,0,0,,כי {\c&H0033D7FF&}בסוף{\c&HFFFFFF&} כשאתם קונים משהו
+Dialogue: 0,0:00:47.32,0:00:47.90,Main,,0,0,0,,כי בסוף {\c&H0033D7FF&}כשאתם{\c&HFFFFFF&} קונים משהו
+Dialogue: 0,0:00:47.90,0:00:48.14,Main,,0,0,0,,כי בסוף כשאתם {\c&H0033D7FF&}קונים{\c&HFFFFFF&} משהו
+Dialogue: 0,0:00:48.14,0:00:48.58,Main,,0,0,0,,כי בסוף כשאתם קונים {\c&H0033D7FF&}משהו{\c&HFFFFFF&}
+Dialogue: 0,0:00:48.58,0:00:48.86,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}אל{\c&HFFFFFF&} תחשבו רק
+Dialogue: 0,0:00:48.86,0:00:49.30,Main,,0,0,0,,אל {\c&H0033D7FF&}תחשבו{\c&HFFFFFF&} רק
+Dialogue: 0,0:00:49.30,0:00:49.46,Main,,0,0,0,,אל תחשבו {\c&H0033D7FF&}רק{\c&HFFFFFF&}
+Dialogue: 0,0:00:49.46,0:00:49.84,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}כמה{\c&HFFFFFF&} אתם משלמים עליו עכשיו
+Dialogue: 0,0:00:49.84,0:00:50.04,Main,,0,0,0,,כמה {\c&H0033D7FF&}אתם{\c&HFFFFFF&} משלמים עליו עכשיו
+Dialogue: 0,0:00:50.04,0:00:50.46,Main,,0,0,0,,כמה אתם {\c&H0033D7FF&}משלמים{\c&HFFFFFF&} עליו עכשיו
+Dialogue: 0,0:00:50.46,0:00:50.68,Main,,0,0,0,,כמה אתם משלמים {\c&H0033D7FF&}עליו{\c&HFFFFFF&} עכשיו
+Dialogue: 0,0:00:50.68,0:00:50.98,Main,,0,0,0,,כמה אתם משלמים עליו {\c&H0033D7FF&}עכשיו{\c&HFFFFFF&}
+Dialogue: 0,0:00:50.98,0:00:51.54,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}אלא{\c&HFFFFFF&} גם כמה
+Dialogue: 0,0:00:51.54,0:00:51.66,Main,,0,0,0,,אלא {\c&H0033D7FF&}גם{\c&HFFFFFF&} כמה
+Dialogue: 0,0:00:51.66,0:00:52.04,Main,,0,0,0,,אלא גם {\c&H0033D7FF&}כמה{\c&HFFFFFF&}
+Dialogue: 0,0:00:52.04,0:00:52.20,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}הוא{\c&HFFFFFF&} הולך לעלות
+Dialogue: 0,0:00:52.20,0:00:52.40,Main,,0,0,0,,הוא {\c&H0033D7FF&}הולך{\c&HFFFFFF&} לעלות
+Dialogue: 0,0:00:52.40,0:00:52.46,Main,,0,0,0,,הוא הולך {\c&H0033D7FF&}לעלות{\c&HFFFFFF&}
+Dialogue: 0,0:00:52.46,0:00:54.06,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}וזה{\c&HFFFFFF&} משהו שלדעתי
+Dialogue: 0,0:00:54.06,0:00:54.70,Main,,0,0,0,,וזה {\c&H0033D7FF&}משהו{\c&HFFFFFF&} שלדעתי
+Dialogue: 0,0:00:54.70,0:00:55.18,Main,,0,0,0,,וזה משהו {\c&H0033D7FF&}שלדעתי{\c&HFFFFFF&}
+Dialogue: 0,0:00:55.18,0:00:55.96,Main,,0,0,0,,{\fscx112\fscy112\t(0,90,\fscx100\fscy100)}{\c&H0033D7FF&}שווה{\c&HFFFFFF&} להתחיל לשים אליו לב
+Dialogue: 0,0:00:55.96,0:00:56.52,Main,,0,0,0,,שווה {\c&H0033D7FF&}להתחיל{\c&HFFFFFF&} לשים אליו לב
+Dialogue: 0,0:00:56.52,0:00:57.08,Main,,0,0,0,,שווה להתחיל {\c&H0033D7FF&}לשים{\c&HFFFFFF&} אליו לב
+Dialogue: 0,0:00:57.08,0:00:57.26,Main,,0,0,0,,שווה להתחיל לשים {\c&H0033D7FF&}אליו{\c&HFFFFFF&} לב
+Dialogue: 0,0:00:57.26,0:00:57.77,Main,,0,0,0,,שווה להתחיל לשים אליו {\c&H0033D7FF&}לב{\c&HFFFFFF&}
