@@ -29,6 +29,7 @@ def ts(t):
     t=max(0,t);h=int(t//3600);m=int(t%3600//60);s=t%60
     return f"{h}:{m:02d}:{s:05.2f}"
 YEL="&H0AD6FF&"; WHT="&HFFFFFF&"
+CAPS=[]
 ev=[]
 for ci,c in enumerate(chunks):
     cs=c[0][1]; ce=c[-1][2]
@@ -38,6 +39,7 @@ for ci,c in enumerate(chunks):
         ws=cs if wi==0 else w[1]
         we=ce if wi==len(c)-1 else c[wi+1][1]
         if we<=ws: continue
+        CAPS.append((ws,we,cs,tuple(clean(x[0]) for x in c),wi))
         parts=[]
         for k,x in enumerate(c):
             col=YEL if k==wi else WHT
@@ -81,10 +83,57 @@ base=max(OW/IW,OH/IH)
 dec=subprocess.Popen(["ffmpeg","-v","error","-i",V,"-f","rawvideo","-pix_fmt","bgr24"]+(["-t",str(LIMIT)] if LIMIT else [])+["-"],stdout=subprocess.PIPE)
 enc_cmd=["ffmpeg","-v","error","-y","-f","rawvideo","-pix_fmt","bgr24","-s",f"{OW}x{OH}","-r",str(FPS),"-i","-",
  "-i",V,"-map","0:v","-map","1:a",
- "-vf","ass=subs.ass:fontsdir=fd,format=yuv420p",
+ "-vf","format=yuv420p",
  "-af","highpass=f=80,afftdn=nr=14:nf=-38:tn=1,equalizer=f=3000:t=q:w=1.2:g=1.5,acompressor=threshold=-20dB:ratio=3:attack=8:release=160:makeup=1.5,loudnorm=I=-14:TP=-1.5:LRA=9",
  "-c:v","libx264","-preset","slow","-crf","17","-profile:v","high","-c:a","aac","-b:a","192k","-ar","48000","-movflags","+faststart","-shortest"]+(["-t",str(LIMIT)] if LIMIT else [])+[OUT]
 enc=subprocess.Popen(enc_cmd,stdin=subprocess.PIPE)
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
+FONT="fd/Heebo-ExtraBold.ttf"; FS=112; STROKE=9; CY=1360; MAXW=980
+YELLOW=(255,214,10); WHITE=(255,255,255)
+_cache={}
+def render(words,active,scale):
+    key=(words,active,round(scale,2))
+    if key in _cache: return _cache[key]
+    fs=FS
+    while True:
+        f=ImageFont.truetype(FONT,int(fs*scale),layout_engine=ImageFont.Layout.RAQM)
+        ws=[f.getbbox(w,direction="rtl",stroke_width=STROKE) for w in words]
+        sp=int(f.size*0.22)
+        tot=sum(b[2]-b[0] for b in ws)+sp*(len(words)-1)
+        if tot<=MAXW*scale or fs<70: break
+        fs-=6
+    asc,desc=f.getmetrics(); H=asc+desc+2*STROKE+40; W=tot+80
+    img=Image.new("RGBA",(W,H),(0,0,0,0))
+    sh=Image.new("RGBA",(W,H),(0,0,0,0))
+    d=ImageDraw.Draw(img); ds=ImageDraw.Draw(sh)
+    x=W-40  # lay out right-to-left: first word on the right
+    for i,(w,b) in enumerate(zip(words,ws)):
+        wd=b[2]-b[0]; x-=wd
+        col=YELLOW if i==active else WHITE
+        ds.text((x-b[0]+4,20+STROKE+6),w,font=f,fill=(0,0,0,150),stroke_width=STROKE,stroke_fill=(0,0,0,150),direction="rtl")
+        d.text((x-b[0],20+STROKE),w,font=f,fill=col,stroke_width=STROKE,stroke_fill=(12,12,12,255),direction="rtl")
+        x-=sp
+    sh=sh.filter(ImageFilter.GaussianBlur(6))
+    out=Image.alpha_composite(sh,img)
+    a=np.asarray(out).astype(np.float32)
+    res=(a[:,:,2::-1].copy(), a[:,:,3:4]/255.0)  # BGR, alpha
+    _cache[key]=res; return res
+def overlay(frame,t):
+    for ws,we,cs,words,wi in CAPS:
+        if ws<=t<we: break
+    else: return frame
+    dt=t-cs
+    if dt<0.11: sc=0.85+0.19*(dt/0.11)
+    elif dt<0.18: sc=1.04-0.04*((dt-0.11)/0.07)
+    else: sc=1.0
+    alpha=min(1.0,dt/0.06) if dt>=0 else 1
+    rgb,a=render(words,wi,sc); h,w=a.shape[:2]
+    x0=OW//2-w//2; y0=CY-h//2
+    xs,xe=max(0,x0),min(OW,x0+w); ys,ye=max(0,y0),min(OH,y0+h)
+    roi=frame[ys:ye,xs:xe].astype(np.float32)
+    aa=a[ys-y0:ye-y0,xs-x0:xe-x0]*alpha
+    frame[ys:ye,xs:xe]=(roi*(1-aa)+rgb[ys-y0:ye-y0,xs-x0:xe-x0]*aa).astype(np.uint8)
+    return frame
 n=0;fs=IW*IH*3
 while True:
     b=dec.stdout.read(fs)
@@ -97,6 +146,7 @@ while True:
     tx=min(0,max(OW-IW*s,tx)); ty=min(0,max(OH-IH*s,ty))
     M=np.float32([[s,0,tx],[0,s,ty]])
     out=cv2.warpAffine(img,M,(OW,OH),flags=cv2.INTER_LANCZOS4,borderMode=cv2.BORDER_REFLECT)
+    out=overlay(np.ascontiguousarray(out),t)
     enc.stdin.write(out.tobytes()); n+=1
 enc.stdin.close(); enc.wait(); dec.wait()
 print("frames",n)
