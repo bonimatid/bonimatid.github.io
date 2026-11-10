@@ -321,7 +321,8 @@
   }
   // Place analytics / Meta Pixel code here. It only runs after the visitor clicks "אישור הכל".
   function loadOptionalScripts() {
-    /* e.g. Google Analytics / Meta Pixel snippet goes here */
+    /* e.g. Google Analytics / Meta Pixel snippet goes here.
+       NOTE: also allow their domains in the Content-Security-Policy meta tag of every page. */
   }
   document.getElementById("cookieAll").addEventListener("click", function () { setConsent(true); });
   document.getElementById("cookieEssential").addEventListener("click", function () { setConsent(false); });
