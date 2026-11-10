@@ -9,9 +9,9 @@
     return "https://wa.me/" + WA_NUMBER + (text ? "?text=" + encodeURIComponent(text) : "");
   }
   var DEFAULT_MSG = "היי! הגעתי מהאתר של בונים עתיד ואשמח לשמוע פרטים על הקורסים והליווי 🙌";
-  document.querySelectorAll("[data-wa]").forEach(function (a) {
-    a.href = waLink(DEFAULT_MSG);
-  });
+  function wireWa() {
+    document.querySelectorAll("[data-wa]").forEach(function (a) { a.href = waLink(DEFAULT_MSG); });
+  }
 
   /* ---------- year ---------- */
   var y = document.getElementById("year");
@@ -22,23 +22,26 @@
   var burger = document.getElementById("burger");
   var links = document.getElementById("navLinks");
   function onScroll() {
-    nav.classList.toggle("scrolled", window.scrollY > 30);
+    if (nav && !document.body.classList.contains("legal-page")) nav.classList.toggle("scrolled", window.scrollY > 30);
   }
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
   function closeMenu() {
+    if (!links) return;
     links.classList.remove("open");
     burger.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
   }
-  burger.addEventListener("click", function () {
-    var open = !links.classList.contains("open");
-    links.classList.toggle("open", open);
-    burger.setAttribute("aria-expanded", String(open));
-    document.body.style.overflow = open ? "hidden" : "";
-  });
-  links.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closeMenu); });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
+  if (burger && links) {
+    burger.addEventListener("click", function () {
+      var open = !links.classList.contains("open");
+      links.classList.toggle("open", open);
+      burger.setAttribute("aria-expanded", String(open));
+      document.body.style.overflow = open ? "hidden" : "";
+    });
+    links.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closeMenu); });
+  }
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeMenu(); closeA11y(); } });
 
   /* ---------- reveal on scroll ---------- */
   var reveals = document.querySelectorAll(".reveal");
@@ -124,12 +127,23 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var name = fName.value.trim();
+      var consent = document.getElementById("fConsent");
+      var err = document.getElementById("formError");
       if (!name) {
         fName.classList.add("invalid");
+        err.textContent = "נא למלא שם.";
+        err.hidden = false;
         fName.focus();
         return;
       }
       fName.classList.remove("invalid");
+      if (consent && !consent.checked) {
+        err.textContent = "כדי להמשיך יש לאשר את מדיניות הפרטיות ותנאי השימוש.";
+        err.hidden = false;
+        consent.focus();
+        return;
+      }
+      err.hidden = true;
       var msg = "היי! אני " + name + " והגעתי מהאתר של בונים עתיד.\n" +
         "מסלול: " + levelSelect.value + "\n" +
         (fMsg.value.trim() ? "מה אני הכי אוהב/ת לעשות: " + fMsg.value.trim() : "");
@@ -205,4 +219,115 @@
   }
 
   if (stage) renderQ(0);
+
+  /* =========================================================
+     Shared UI injected on every page: WhatsApp, accessibility, cookies
+     ========================================================= */
+  function store(key, val) {
+    try {
+      if (val === undefined) return JSON.parse(localStorage.getItem(key));
+      localStorage.setItem(key, JSON.stringify(val));
+    } catch (e) { return null; }
+  }
+  var WA_PATH = "M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A12.95 12.95 0 0016.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3zm0 23.6c-2.03 0-4.02-.55-5.75-1.58l-.41-.25-3.96 1.04 1.06-3.86-.27-.4A10.6 10.6 0 1116.04 26.6zm5.82-7.93c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.72.16-.21.32-.82 1.03-1 1.25-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.29.32-1.11 1.09-1.11 2.65s1.14 3.08 1.3 3.29c.16.21 2.24 3.42 5.43 4.8.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.88-.77 2.14-1.51.27-.74.27-1.38.19-1.51-.08-.13-.29-.21-.61-.37z";
+
+  var ui = document.createElement("div");
+  ui.innerHTML =
+    '<a href="#" data-wa class="wa-float" target="_blank" rel="noopener" aria-label="שליחת הודעה בוואטסאפ">' +
+      '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="' + WA_PATH + '"/></svg><span class="wa-tip">דברו איתי בוואטסאפ</span></a>' +
+
+    '<button type="button" class="a11y-btn" id="a11yBtn" aria-label="תפריט נגישות" aria-expanded="false" aria-controls="a11yPanel">' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M4 8l8 1.5L20 8M12 9.5V15m0 0l-3.5 6M12 15l3.5 6"/></svg></button>' +
+    '<div class="a11y-panel" id="a11yPanel" role="dialog" aria-label="תפריט נגישות" hidden>' +
+      '<div class="a11y-head"><strong>תפריט נגישות</strong><button type="button" class="a11y-close" id="a11yClose" aria-label="סגירת תפריט הנגישות">✕</button></div>' +
+      '<div class="a11y-size"><span>גודל טקסט</span><div><button type="button" data-fs="-1" aria-label="הקטנת טקסט">א-</button><button type="button" data-fs="1" aria-label="הגדלת טקסט">א+</button></div></div>' +
+      '<div class="a11y-grid">' +
+        '<button type="button" data-a11y="contrast" aria-pressed="false">◐ ניגודיות גבוהה</button>' +
+        '<button type="button" data-a11y="links" aria-pressed="false">🔗 הדגשת קישורים</button>' +
+        '<button type="button" data-a11y="font" aria-pressed="false">Aa גופן קריא</button>' +
+        '<button type="button" data-a11y="motion" aria-pressed="false">⏸ עצירת אנימציות</button>' +
+      '</div>' +
+      '<div class="a11y-foot"><button type="button" id="a11yReset">איפוס הגדרות</button><a href="accessibility.html">הצהרת נגישות</a></div>' +
+    '</div>' +
+
+    '<div class="cookie-bar" id="cookieBar" role="region" aria-label="הודעה על שימוש בעוגיות" hidden>' +
+      '<div class="cookie-text"><strong>🍪 עוגיות ופרטיות</strong>' +
+      '<p>האתר משתמש באחסון הכרחי בדפדפן כדי לפעול כראוי ולזכור את ההעדפות שלך. כלי מדידה ושיווק יופעלו רק באישורך. פרטים ב<a href="privacy.html#cookies">מדיניות העוגיות והפרטיות</a>.</p></div>' +
+      '<div class="cookie-actions"><button type="button" class="btn btn-gold" id="cookieAll">אישור הכל</button>' +
+      '<button type="button" class="btn btn-ghost" id="cookieEssential">הכרחיות בלבד</button></div>' +
+    '</div>';
+  while (ui.firstChild) document.body.appendChild(ui.firstChild);
+  wireWa();
+
+  /* ---------- accessibility menu ---------- */
+  var root = document.documentElement;
+  var a11yBtn = document.getElementById("a11yBtn");
+  var a11yPanel = document.getElementById("a11yPanel");
+  var a11y = store("ba_a11y") || { fs: 0, contrast: false, links: false, font: false, motion: false };
+  function applyA11y() {
+    document.body.style.zoom = a11y.fs ? String(1 + a11y.fs * 0.1) : "";
+    ["contrast", "links", "font", "motion"].forEach(function (k) {
+      root.classList.toggle("a11y-" + k, !!a11y[k]);
+      var b = a11yPanel.querySelector('[data-a11y="' + k + '"]');
+      if (b) b.setAttribute("aria-pressed", String(!!a11y[k]));
+    });
+    store("ba_a11y", a11y);
+  }
+  function closeA11y() {
+    if (!a11yPanel || a11yPanel.hidden) return;
+    a11yPanel.hidden = true;
+    a11yBtn.setAttribute("aria-expanded", "false");
+    a11yBtn.focus();
+  }
+  a11yBtn.addEventListener("click", function () {
+    var open = a11yPanel.hidden;
+    a11yPanel.hidden = !open;
+    a11yBtn.setAttribute("aria-expanded", String(open));
+    if (open) a11yPanel.querySelector("button").focus();
+  });
+  document.getElementById("a11yClose").addEventListener("click", closeA11y);
+  document.addEventListener("click", function (e) {
+    if (!a11yPanel.hidden && !a11yPanel.contains(e.target) && !a11yBtn.contains(e.target)) {
+      a11yPanel.hidden = true;
+      a11yBtn.setAttribute("aria-expanded", "false");
+    }
+  });
+  a11yPanel.querySelectorAll("[data-fs]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      a11y.fs = Math.max(0, Math.min(4, a11y.fs + +b.dataset.fs));
+      applyA11y();
+    });
+  });
+  a11yPanel.querySelectorAll("[data-a11y]").forEach(function (b) {
+    b.addEventListener("click", function () { a11y[b.dataset.a11y] = !a11y[b.dataset.a11y]; applyA11y(); });
+  });
+  document.getElementById("a11yReset").addEventListener("click", function () {
+    a11y = { fs: 0, contrast: false, links: false, font: false, motion: false };
+    applyA11y();
+  });
+  applyA11y();
+
+  /* ---------- cookie consent ---------- */
+  var cookieBar = document.getElementById("cookieBar");
+  function showBar(show) {
+    cookieBar.hidden = !show;
+    document.body.classList.toggle("has-cookie-bar", show);
+  }
+  function setConsent(all) {
+    var c = { essential: true, analytics: all, marketing: all, date: new Date().toISOString() };
+    store("ba_consent", c);
+    showBar(false);
+    if (all) loadOptionalScripts();
+  }
+  // Place analytics / Meta Pixel code here. It only runs after the visitor clicks "אישור הכל".
+  function loadOptionalScripts() {
+    /* e.g. Google Analytics / Meta Pixel snippet goes here */
+  }
+  document.getElementById("cookieAll").addEventListener("click", function () { setConsent(true); });
+  document.getElementById("cookieEssential").addEventListener("click", function () { setConsent(false); });
+  document.querySelectorAll("[data-cookie-settings]").forEach(function (b) {
+    b.addEventListener("click", function () { showBar(true); document.getElementById("cookieAll").focus(); });
+  });
+  var consent = store("ba_consent");
+  if (!consent) showBar(true); else if (consent.analytics) loadOptionalScripts();
 })();
