@@ -235,6 +235,8 @@
   ui.innerHTML =
     '<a href="#" data-wa class="wa-float" target="_blank" rel="noopener" aria-label="שליחת הודעה בוואטסאפ">' +
       '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="' + WA_PATH + '"/></svg><span class="wa-tip">דברו איתי בוואטסאפ</span></a>' +
+    '<a href="https://www.instagram.com/itayhuli.official/" class="ig-float" target="_blank" rel="noopener" aria-label="האינסטגרם של בונים עתיד">' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" class="ig-dot"/></svg><span class="wa-tip">עקבו באינסטגרם</span></a>' +
 
     '<button type="button" class="a11y-btn" id="a11yBtn" aria-label="תפריט נגישות" aria-expanded="false" aria-controls="a11yPanel">' +
       '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M4 8l8 1.5L20 8M12 9.5V15m0 0l-3.5 6M12 15l3.5 6"/></svg></button>' +

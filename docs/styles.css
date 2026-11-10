@@ -651,3 +651,19 @@ body.has-cookie-bar .wa-float,body.has-cookie-bar .a11y-btn{bottom:150px}
 .section{padding:clamp(64px,8vw,104px) 0}
 .fit{padding-top:clamp(56px,6vw,80px)}
 .quiz-section,.fit+.section{padding-top:clamp(40px,5vw,64px)}
+
+/* instagram */
+.ig-float{position:fixed;bottom:98px;left:31px;z-index:70;width:48px;height:48px;border-radius:15px;display:grid;place-items:center;
+  background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%);
+  box-shadow:0 12px 30px -8px rgba(214,36,159,.55);transition:transform .35s var(--ease)}
+.ig-float:hover{transform:scale(1.08) rotate(6deg)}
+.ig-float svg{width:26px;height:26px;fill:none;stroke:#fff;stroke-width:2}
+.ig-float .ig-dot,.way-icon.ig .ig-dot{fill:currentColor;stroke:none}
+.ig-float .ig-dot{fill:#fff}
+.ig-float:hover .wa-tip{opacity:1;transform:none}
+.ig-float .wa-tip{left:62px}
+.way-icon.ig{background:rgba(214,36,159,.12);color:#e1306c}
+.way-icon.ig svg{stroke:#e1306c}
+body.has-cookie-bar .ig-float{bottom:224px}
+@media (max-width:700px){body.has-cookie-bar .ig-float{bottom:324px}}
+@media (max-width:600px){.ig-float{bottom:84px;left:20px;width:46px;height:46px}}
