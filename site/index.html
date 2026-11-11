@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>חשמל מני – חשמלאי מוסמך 24/7</title>
+<meta name="description" content="חשמל מני – חשמלאי מוסמך, שירות 24/7. תקלות חשמל, עבודות חשמל, הוספת נקודות, התקנת גופי תאורה, החלפת גופי חימום לדוד. נייד 052-2748212.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f172a; --bg2:#111c33; --card:#16223d; --text:#f1f5f9; --muted:#a8b3c7;
+    --accent:#facc15; --accent-ink:#1a1400; --wa:#22c55e; --line:rgba(255,255,255,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Heebo",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding-bottom:84px}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+
+  header{position:sticky;top:0;z-index:20;background:rgba(15,23,42,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+  .logo{display:flex;align-items:center;gap:8px;font-weight:900;font-size:1.35rem}
+  .logo svg{width:28px;height:28px;color:var(--accent)}
+  .nav-phone{background:var(--accent);color:var(--accent-ink);font-weight:700;padding:8px 14px;border-radius:999px;white-space:nowrap;direction:ltr}
+
+  .hero{padding:48px 0 56px;background:radial-gradient(900px 400px at 85% 0%,rgba(250,204,21,.14),transparent 60%)}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,.12);color:#86efac;border:1px solid rgba(34,197,94,.35);padding:6px 12px;border-radius:999px;font-weight:500;font-size:.95rem}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 0 rgba(34,197,94,.7);animation:pulse 1.8s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+  h1{font-size:clamp(2.2rem,6vw,3.6rem);font-weight:900;line-height:1.1;margin:18px 0 12px}
+  h1 span{color:var(--accent)}
+  .lead{font-size:1.2rem;color:var(--muted);max-width:34ch}
+  .big247{display:inline-block;margin-top:18px;font-weight:900;font-size:1.5rem;color:var(--accent)}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;padding:14px 22px;border-radius:14px;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:22px;height:22px}
+  .btn-call{background:var(--accent);color:var(--accent-ink)}
+  .btn-wa{background:var(--wa);color:#052e13}
+  .photo{position:relative}
+  .photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 35%;border-radius:24px;border:4px solid var(--accent);display:block}
+  .photo-tag{position:absolute;bottom:-16px;right:16px;left:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .photo-tag b{font-size:1.1rem}
+  .photo-tag small{color:var(--muted)}
+
+  section{padding:56px 0}
+  h2{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:900;margin-bottom:8px}
+  .sub{color:var(--muted);margin-bottom:28px}
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+  .card .ic{width:48px;height:48px;border-radius:12px;background:rgba(250,204,21,.12);color:var(--accent);display:grid;place-items:center;margin-bottom:12px}
+  .card .ic svg{width:26px;height:26px}
+  .card h3{font-size:1.2rem;margin-bottom:4px}
+  .card p{color:var(--muted);font-size:.98rem}
+
+  .why{background:var(--bg2);border-block:1px solid var(--line)}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+  .why-item{display:flex;gap:12px;align-items:flex-start}
+  .why-item .n{flex:none;width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:900;display:grid;place-items:center}
+  .why-item h3{font-size:1.1rem}
+  .why-item p{color:var(--muted);font-size:.95rem}
+
+  .contact{text-align:center}
+  .phone-big{display:inline-block;direction:ltr;font-size:clamp(2rem,8vw,3.4rem);font-weight:900;color:var(--accent);margin:8px 0 20px}
+  .contact .cta{justify-content:center}
+
+  footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);text-align:center;font-size:.9rem}
+
+  .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:30;display:none;gap:10px;padding:10px 16px;background:rgba(15,23,42,.96);border-top:1px solid var(--line)}
+  .sticky-bar .btn{flex:1;justify-content:center;padding:12px}
+
+  @media (max-width:820px){
+    .hero-grid{grid-template-columns:1fr;gap:36px}
+    .photo{order:-1;max-width:420px;margin:0 auto;width:100%}
+    .hero{padding-top:28px;text-align:center}
+    .lead{margin:0 auto}
+    .cta{justify-content:center}
+    .sticky-bar{display:flex}
+    .nav-phone{display:none}
+  }
+  @media (min-width:821px){body{padding-bottom:0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+      חשמל מני
+    </a>
+    <a class="nav-phone" href="tel:0522748212">052-2748212</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="badge"><span class="dot"></span> זמין עכשיו – שירות 24/7</span>
+        <h1>מני – <span>חשמלאי מוסמך</span></h1>
+        <p class="lead">תקלות חשמל, עבודות חשמל, הוספת נקודות, התקנת גופי תאורה והחלפת גופי חימום לדוד. שירות אמין, מקצועי ומהיר – בכל שעה.</p>
+        <span class="big247">⚡ זמין 24 שעות, 7 ימים בשבוע</span>
+        <div class="cta">
+          <a class="btn btn-call" href="tel:0522748212">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+            חייגו עכשיו
+          </a>
+          <a class="btn btn-wa" href="https://wa.me/972522748212?text=%D7%94%D7%99%D7%99%20%D7%9E%D7%A0%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A6%D7%A8%D7%99%D7%9A%20%D7%97%D7%A9%D7%9E%D7%9C%D7%90%D7%99" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.3-.2zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+            וואטסאפ
+          </a>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="meni.jpg" alt="מני – חשמלאי מוסמך">
+        <div class="photo-tag">
+          <div><b>מני</b><br><small>חשמלאי מוסמך</small></div>
+          <a class="btn btn-call" style="padding:8px 14px;font-size:1rem;direction:ltr" href="tel:0522748212">052-2748212</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>השירותים שלי</h2>
+      <p class="sub">כל עבודות החשמל לבית ולעסק – ביד אחת מקצועית</p>
+      <div class="services">
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div>
+          <h3>תקלות חשמל 24/7</h3>
+          <p>הפסקות חשמל, קצרים, ממסר פחת שקופץ – מגיע מהר ופותר.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8z"/></svg></div>
+          <h3>עבודות חשמל</h3>
+          <p>תיקונים, שדרוגים, החלפת לוחות ועבודות חשמל כלליות.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M10 9v2M14 9v2M9 15h6"/></svg></div>
+          <h3>הוספת נקודות</h3>
+          <p>שקעים, מפסקים ונקודות חשמל חדשות בדיוק איפה שצריך.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2z"/></svg></div>
+          <h3>התקנת גופי תאורה</h3>
+          <p>מנורות, ספוטים, פסי לד ותאורת חוץ – התקנה נקייה ובטוחה.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.8V4a2 2 0 0 0-4 0v10.8a4 4 0 1 0 4 0z"/></svg></div>
+          <h3>החלפת גוף חימום לדוד</h3>
+          <p>אין מים חמים? החלפת גוף חימום ותרמוסטט במהירות.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></div>
+          <h3>ועוד…</h3>
+          <p>כל עבודת חשמל אחרת – התקשרו ונתאם.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap">
+      <h2>למה מני?</h2>
+      <p class="sub">שירות שאפשר לסמוך עליו</p>
+      <div class="why-grid">
+        <div class="why-item"><span class="n">1</span><div><h3>חשמלאי מוסמך</h3><p>עבודה לפי התקן, בטיחות קודם כל.</p></div></div>
+        <div class="why-item"><span class="n">2</span><div><h3>זמין 24/7</h3><p>גם בלילה, בשבת ובחג.</p></div></div>
+        <div class="why-item"><span class="n">3</span><div><h3>שירות אמין</h3><p>מחיר הוגן, הגעה בזמן ויחס אישי.</p></div></div>
+        <div class="why-item"><span class="n">4</span><div><h3>מענה מהיר</h3><p>מתקשרים – ומני עונה.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>צריכים חשמלאי? דברו עם מני</h2>
+      <p class="sub">זמין עכשיו לשיחה ולהגעה – 24 שעות ביממה</p>
+      <a class="phone-big" href="tel:0522748212">052-2748212</a>
+      <div class="cta">
+        <a class="btn btn-call" href="tel:0522748212">📞 התקשרו עכשיו</a>
+        <a class="btn btn-wa" href="https://wa.me/972522748212" target="_blank" rel="noopener">💬 שלחו וואטסאפ</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© חשמל מני – חשמלאי מוסמך · שירות 24/7 · נייד <a href="tel:0522748212" style="direction:ltr;display:inline-block">052-2748212</a></div>
+</footer>
+
+<div class="sticky-bar">
+  <a class="btn btn-call" href="tel:0522748212">📞 חייגו</a>
+  <a class="btn btn-wa" href="https://wa.me/972522748212" target="_blank" rel="noopener">💬 וואטסאפ</a>
+</div>
+
+</body>
+</html>
