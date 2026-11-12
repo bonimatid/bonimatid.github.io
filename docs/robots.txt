@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://itayhulibyzness67-ui.github.io/Mm/sitemap.xml
+Sitemap: https://bonimatid.github.io/sitemap.xml
