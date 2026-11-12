@@ -683,3 +683,9 @@ body.has-cookie-bar .ig-float{bottom:224px}
 .brand-mark.brand-photo{border-radius:50%;padding:2px;background:var(--gold-grad);border:0;overflow:hidden;width:42px;height:42px}
 .brand-photo picture,.brand-photo img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
 .brand-mark.brand-photo{padding:0;background:#000;box-shadow:0 0 18px -4px rgba(227,185,80,.6);width:44px;height:44px}
+/* bigger top logo so the whole badge is visible */
+.nav .brand-mark.brand-photo{width:58px;height:58px}
+.nav.scrolled .brand-mark.brand-photo{width:50px;height:50px}
+.nav .brand-mark.brand-photo{transition:width .4s var(--ease),height .4s var(--ease)}
+.footer .brand-mark.brand-photo{width:64px;height:64px}
+@media (max-width:600px){.nav .brand-mark.brand-photo{width:50px;height:50px}.nav.scrolled .brand-mark.brand-photo{width:46px;height:46px}}
