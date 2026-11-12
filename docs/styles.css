@@ -672,3 +672,9 @@ body.has-cookie-bar .ig-float{bottom:224px}
 .about-sign strong{font-family:var(--display);font-size:28px;font-weight:900;color:var(--ink)}
 .about-sign span{font-family:var(--font);font-size:15px;letter-spacing:.06em;color:var(--gold-deep)}
 .a11y-contrast .about-sign strong{color:#fff}
+
+/* brand lockup with founder signature */
+.brand-text{display:flex;flex-direction:column;line-height:1}
+.brand-text .brand-name{line-height:1.05}
+.brand-by{margin-top:5px;font-family:var(--font);font-size:9.5px;font-weight:700;letter-spacing:.2em;color:var(--gold);opacity:.9;text-align:right;white-space:nowrap}
+.footer .brand-by{font-size:11px}
