@@ -1,0 +1,4 @@
+Contact: mailto:itayholixbox67@gmail.com
+Expires: 2027-11-12T00:00:00.000Z
+Preferred-Languages: he, en
+Canonical: https://bonimatid.github.io/.well-known/security.txt

@@ -7,4 +7,4 @@
 - עמודים משפטיים: `privacy.html` (פרטיות ועוגיות), `terms.html` (תנאי שימוש וביטול), `accessibility.html` (הצהרת נגישות).
 - קוד של Google Analytics / Meta Pixel יש להכניס בפונקציה `loadOptionalScripts` ב-`script.js` – הוא ירוץ רק אחרי שהגולש אישר עוגיות.
 - לוגו ותמונות פרופיל: תיקייה `brand/` (`profile-logo.png`, `profile-logo-name.png`, `logo.svg`).
-- אבטחה: בכל עמוד יש Content-Security-Policy שמאפשר רק קבצים מהאתר עצמו ו-Google Fonts. כשמוסיפים כלי חיצוני (פיקסל, אנליטיקס) צריך להוסיף את הדומיין שלו למדיניות.
+- אבטחה: גופנים מאוחסנים באתר עצמו (assets/fonts), Content-Security-Policy שמאפשר רק קבצים מהאתר, הגנה מהטמעה באתרים אחרים (clickjacking) ב-script.js, וקובץ .well-known/security.txt לדיווח על בעיות אבטחה. כשמוסיפים כלי חיצוני צריך להוסיף את הדומיין שלו למדיניות.

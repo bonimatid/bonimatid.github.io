@@ -3,6 +3,11 @@
   "use strict";
   document.documentElement.classList.remove("no-js");
 
+  /* ---------- anti-clickjacking: never run inside someone else's frame ---------- */
+  if (window.top !== window.self) {
+    try { window.top.location = window.self.location.href; } catch (e) { document.documentElement.innerHTML = ""; return; }
+  }
+
   /* ---------- WhatsApp (number is never shown on the page) ---------- */
   var WA_NUMBER = ["972", "52", "201", "0678"].join("");
   function waLink(text) {
