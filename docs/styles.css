@@ -667,3 +667,8 @@ body.has-cookie-bar .wa-float,body.has-cookie-bar .a11y-btn{bottom:150px}
 body.has-cookie-bar .ig-float{bottom:224px}
 @media (max-width:700px){body.has-cookie-bar .ig-float{bottom:324px}}
 @media (max-width:600px){.ig-float{bottom:84px;left:20px;width:46px;height:46px}}
+
+.about-sign{display:flex;flex-direction:column;align-items:center;gap:2px}
+.about-sign strong{font-family:var(--display);font-size:28px;font-weight:900;color:var(--ink)}
+.about-sign span{font-family:var(--font);font-size:15px;letter-spacing:.06em;color:var(--gold-deep)}
+.a11y-contrast .about-sign strong{color:#fff}
